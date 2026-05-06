@@ -1,0 +1,78 @@
+services:
+  # --- FRONTEND (REACT) ---
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: psico-frontend
+    ports:
+      - "3000:5173" # Esto mapea el puerto 3000 de tu Mac al 5173 de Docker
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_GOOGLE_MAPS_API_KEY=tu_api_key_de_maps # Necesaria para el mapa
+    depends_on:
+      - backend
+
+  # --- BACKEND (NODE.JS ) ---
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: psico-backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+      # Montamos la "llave" de la Service Account de Google
+      - ./backend/config/google-key.json:/app/config/google-key.json:ro
+    environment:
+      - DB_HOST=postgres-db
+      - DB_USER=admin
+      - DB_PASSWORD=psico_secure_pass
+      - DB_NAME=clinica_db
+      - REDIS_HOST=cache-session
+      - GOOGLE_CALENDAR_ID=iversoneldelmomento@gmail.com # El calendario que quieres leer
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/config/google-key.json
+    depends_on:
+      - postgres-db
+      - cache-session
+
+  # --- BASE DE DATOS (POSTGRESQL) ---
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: psico-db
+    restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=psico_secure_pass
+      - POSTGRES_DB=clinica_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # --- GESTOR DE BASE DE DATOS (VISUAL) ---
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: psico-pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@clinica.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres-db
+
+  # --- CACHÉ (REDIS) ---
+  cache-session:
+    image: redis:7-alpine
+    container_name: psico-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data: # Esto asegura que los datos de los pacientes no se borren

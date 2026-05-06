@@ -1,0 +1,22 @@
+const CTASection = () => {
+  return (
+    <section className="bg-[#83A68E] py-16 text-center text-white">
+      <h2 className="text-3xl font-semibold">
+        Da el primer paso hoy
+      </h2>
+
+      <p className="mt-4 max-w-xl mx-auto">
+        Si estás pasando por un momento difícil, puedo acompañarte en el proceso.
+      </p>
+
+      <button
+        onClick={() => (window.location.href = "/pedir-cita")}
+        className="mt-6 bg-white text-[#83A68E] px-6 py-3 rounded-full font-medium hover:opacity-90 transition cursor-pointer"
+      >
+        Pedir cita
+      </button>
+    </section>
+  );
+};
+
+export default CTASection;
