@@ -1,6 +1,7 @@
 import Header from "./components/header/Header";
 import CookiesBanner from "./components/cookies/CookiesBanner";
-import { HashRouter, Routes, Route } from "react-router-dom"; // <-- Importamos HashRouter
+import { HashRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/scrolltotop/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import SobreMiPage from "./pages/SobreMiPage";
@@ -10,8 +11,8 @@ import Footer from "./components/footer/Footer";
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Header />
-
       <CookiesBanner />
       <Routes>
         <Route path="/" element={<HomePage />} />

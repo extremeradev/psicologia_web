@@ -1,12 +1,7 @@
 import FadeInOnScroll from "../fadeinonscroll/FadeInOnScroll";
 import FAQ from "../faq/FAQ";
-import {
-  Brain,
-  Heart,
-  Baby,
-  Sparkles,
-  ArrowRight,
-} from "lucide-react";
+import { Brain, Heart, Baby, Sparkles, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -42,7 +37,7 @@ const services = [
 export default function Services() {
   return (
     <>
-    <style>{`
+      <style>{`
       .clip-diagonal {
         clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
       }
@@ -53,60 +48,55 @@ export default function Services() {
       }
     `}</style>
 
-    <section className="relative overflow-hidden">
-      {/* Fondo gris sólido con diagonal */}
-      <div className="absolute inset-0 clip-diagonal bg-[#3A3B70]/50" />
+      <section className="relative overflow-hidden">
+        {/* Fondo gris sólido con diagonal */}
+        <div className="absolute inset-0 clip-diagonal bg-[#3A3B70]/50" />
 
-      {/* Contenido */}
-      <div className="relative px-6 pt-20 pb-28 md:pt-32 md:pb-40 z-10">
-        <FadeInOnScroll>
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Servicios
-            </h2>
-            <p className="text-lg text-gray-200 mt-4 max-w-2xl mx-auto">
-              Un espacio de confianza donde trabajar tu bienestar emocional.
-              Cada servicio está adaptado a tus necesidades.
-            </p>
+        {/* Contenido */}
+        <div className="relative px-6 pt-20 pb-28 md:pt-32 md:pb-40 z-10">
+          <FadeInOnScroll>
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white">
+                Servicios
+              </h2>
+              <p className="text-lg text-gray-200 mt-4 max-w-2xl mx-auto">
+                Un espacio de confianza donde trabajar tu bienestar emocional.
+                Cada servicio está adaptado a tus necesidades.
+              </p>
+            </div>
+          </FadeInOnScroll>
+
+          {/* Grid de servicios */}
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, i) => (
+              <FadeInOnScroll key={i}>
+                <ServiceCard {...service} index={i} />
+              </FadeInOnScroll>
+            ))}
           </div>
-        </FadeInOnScroll>
-
-        {/* Grid de servicios */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, i) => (
-            <FadeInOnScroll key={i}>
-              <ServiceCard {...service} index={i} />
-            </FadeInOnScroll>
-          ))}
         </div>
+      </section>
 
-      </div>
-    </section>
+      {/* Llamado a la acción */}
+      <FadeInOnScroll>
+        <div className="bg-[#C2CDFF]/2 text-center pt-20 pb-12 px-6">
+          <p className="text-gray-600 text-lg">¿No encuentras lo que buscas?</p>
+          <Link
+            to="/contacto"
+            className="
+    inline-flex items-center gap-2 mt-4
+    px-8 py-4 rounded-full
+    bg-[#3A3B70]/80 text-white font-semibold
+    hover:bg-[#3A3B70] transition-colors
+  "
+          >
+            Consulta otros servicios
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </FadeInOnScroll>
 
-    {/* Llamado a la acción */}
-    <FadeInOnScroll>
-      <div className="bg-[#C2CDFF]/2 text-center pt-20 pb-12 px-6">
-        <p className="text-gray-600 text-lg">
-          ¿No encuentras lo que buscas?
-        </p>
-        <a
-          href="/contacto"
-          className="
-            inline-flex items-center gap-2 mt-4
-            px-8 py-4 rounded-full
-            bg-[#3A3B70]/80 text-white font-semibold
-            hover:bg-[#3A3B70] transition-colors
-          "
-        >
-          Consulta otros servicios
-          <ArrowRight className="w-5 h-5" />
-        </a>
-      </div>
-    </FadeInOnScroll>
-
-    <FAQ />
-
-    
+      <FAQ />
     </>
   );
 }
