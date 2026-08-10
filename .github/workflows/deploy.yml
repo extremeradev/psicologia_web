@@ -18,11 +18,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install and Build
+      # 1. Entrar a la carpeta 'frontend', instalar y compilar
+      - name: Install and Build Frontend
+        working-directory: ./frontend
         run: |
           npm ci
           npm run build
 
+      # 2. Subir la carpeta 'dist' que se genera DENTRO de frontend
       - name: Deploy via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -31,5 +34,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: sftp
           port: 22
-          local-dir: ./dist/          # Si usas Create React App en lugar de Vite, cambia esto a ./build/
-          server-dir: ./              # Ruta dentro de tu servidor IONOS
+          local-dir: ./frontend/dist/     # Ruta a la carpeta dist dentro de frontend
+          server-dir: ./                  # Ruta raíz en tu servidor IONOS
