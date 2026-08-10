@@ -3,7 +3,7 @@ name: Deploy to IONOS
 on:
   push:
     branches:
-      - main  # Cambia a 'master' si tu rama se llama master
+      - main  # Cambia a 'master' si tu rama principal se llama master
 
 jobs:
   build-and-deploy:
@@ -18,21 +18,21 @@ jobs:
         with:
           node-version: 22
 
-      # 1. Entrar a la carpeta 'frontend', instalar y compilar
+      # 1. Instalar y compilar el frontend
       - name: Install and Build Frontend
         working-directory: ./frontend
         run: |
           npm ci
           npm run build
 
-      # 2. Subir la carpeta 'dist' a IONOS
-      - name: Deploy via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      # 2. Desplegar mediante SFTP (Puerto 22)
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: ./frontend/dist/
-          server-dir: ./
+          port: 22
+          local_path: './frontend/dist/*'
+          remote_path: '.'
+          sftp_only: true
