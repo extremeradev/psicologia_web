@@ -103,7 +103,7 @@ export default function Contacto() {
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-10">
                   Si tienes cualquier duda o quieres concertar una primera
-                  sesión, no dudes en contactarme. Estaré encantada de
+                  sesión, no dudes en escribirme. Estaré encantada de
                   ayudarte.
                 </p>
 

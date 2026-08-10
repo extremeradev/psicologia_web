@@ -1,16 +1,15 @@
 import Header from "./components/header/Header";
 import CookiesBanner from "./components/cookies/CookiesBanner";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom"; // <-- Cambiado de BrowserRouter a HashRouter
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import SobreMiPage from "./pages/SobreMiPage";
 import ContactoPage from "./pages/ContactoPage";
 import Footer from "./components/footer/Footer";
 
-
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
 
       <CookiesBanner />
@@ -22,7 +21,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
