@@ -1,12 +1,12 @@
 import Header from "./components/header/Header";
 import CookiesBanner from "./components/cookies/CookiesBanner";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// 1. Asegúrate de añadir BrowserRouter en esta lista de importación:
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import SobreMiPage from "./pages/SobreMiPage";
 import ContactoPage from "./pages/ContactoPage";
 import Footer from "./components/footer/Footer";
-
 
 function App() {
   return (
