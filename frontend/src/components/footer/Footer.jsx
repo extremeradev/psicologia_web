@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"; // <-- Importamos Link
+
 const Footer = () => {
   return (
     <footer className="bg-[#3A3B70] text-gray-300 mt-20">
@@ -11,7 +13,6 @@ const Footer = () => {
           </h3>
           <p className="text-sm leading-relaxed">
             Terapia psicológica cercana y profesional con perspectiva contextual
-
           </p>
         </div>
 
@@ -22,24 +23,25 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="/" className="hover:text-white transition">
+              {/* Cambiado <a> por <Link to="..."> */}
+              <Link to="/" className="hover:text-white transition">
                 Inicio
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/sobre-mi" className="hover:text-white transition">
+              <Link to="/sobre-mi" className="hover:text-white transition">
                 Sobre mí
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/servicios" className="hover:text-white transition">
+              <Link to="/servicios" className="hover:text-white transition">
                 Servicios
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contacto" className="hover:text-white transition">
+              <Link to="/contacto" className="hover:text-white transition">
                 Contacto
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
