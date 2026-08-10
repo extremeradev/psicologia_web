@@ -96,24 +96,28 @@ export default function SobreMi() {
             Más sobre mí
           </h2>
           <div className="space-y-4 text-gray-700 leading-relaxed text-base md:text-lg">
-            <p>Todo esto forma parte de mi recorrido, pero también me gustaría
-            explicar cómo entiendo la terapia y qué puedes esperar de mi forma
-            de trabajar.</p>
-            <p>Para mí, el malestar no es algo individual sino que
-            tiene mucho que ver con nuestra historia, el contexto en el que
-            vivimos y las experiencias que nos han ido moldeando. Creo que el
-            sufrimiento forma parte de la vida y que muchas de las cosas que
-            hacemos para sentirnos mejor nos han servido en algún momento,
-            aunque con el tiempo dejen de ayudarnos. En consulta no me interesa
-            tanto poner etiquetas sino entender qué está manteniendo ese
-            malestar y encontrar juntxs formas más flexibles de relacionarnos
-            con él.</p> 
-            
-            <p>Si alguna vez has estado conmigo en terapia, probablemente
-            ya sepas que nunca voy a decirte qué decisiones tienes que tomar. No
-            creo que mi papel sea dirigirte, sino acompañarte a explorar qué
-            tiene sentido para ti, ayudarte a desarrollar tu propio criterio y
-            construir una vida más coherente con aquello que realmente valoras.
+            <p>
+              Todo esto forma parte de mi recorrido, pero creo que también es
+              importante contarte cómo entiendo la terapia y cómo trabajo.
+            </p>
+            <p>
+              Para mí, el malestar no es algo individual sino que tiene mucho
+              que ver con nuestra historia, el contexto en el que vivimos y las
+              experiencias que nos han ido moldeando. Creo que el sufrimiento
+              forma parte de la vida y que muchas de las cosas que hacemos para
+              sentirnos mejor nos han servido en algún momento, aunque con el
+              tiempo dejen de ayudarnos. En consulta no me interesa tanto poner
+              etiquetas sino entender qué está manteniendo ese malestar y
+              encontrar juntxs formas más flexibles de relacionarnos con él.
+            </p>
+
+            <p>
+              Si alguna vez has estado conmigo en terapia, probablemente ya
+              sepas que nunca voy a decirte qué decisiones tienes que tomar. No
+              creo que mi papel sea dirigirte, sino acompañarte a explorar qué
+              tiene sentido para ti, ayudarte a desarrollar tu propio criterio y
+              construir una vida más coherente con aquello que realmente
+              valoras.
             </p>
           </div>
         </div>

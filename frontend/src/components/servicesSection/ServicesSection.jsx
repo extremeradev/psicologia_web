@@ -10,27 +10,27 @@ const ServicesSection = () => {
       <div className="px-6 py-6 border-b md:border-b-0 md:border-r border-gray-300 flex flex-col items-center">
         <Heart className="w-10 h-10 text-[#C2CDFF]/80 mb-4" />
         <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          Atención personalizada
+          Espacio de confianza y seguridad
         </h3>
-        <p className="text-gray-600">Texto más corto y claro aquí...</p>
+        
       </div>
 
       {/* Tarjeta 2 */}
       <div className="px-6 py-6 border-b md:border-b-0 md:border-r border-gray-300 flex flex-col items-center">
         <Brain className="w-10 h-10 text-[#C2CDFF]/80 mb-4" />
         <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          Evidencia científica
+          Psicología basada en evidencia
         </h3>
-        <p className="text-gray-600">Texto más corto y claro aquí...</p>
+        
       </div>
 
       {/* Tarjeta 3 */}
       <div className="px-6 py-6 flex flex-col items-center">
         <Users className="w-10 h-10 text-[#C2CDFF]/80 mb-4" />
         <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          Cercanía y confianza
+          Mirada contextual y humana
         </h3>
-        <p className="text-gray-600">Texto más corto y claro aquí...</p>
+        
       </div>
 
     </section>
