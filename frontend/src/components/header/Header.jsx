@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom"; // Importamos Link
 import logo from "../../assets/logo.jpg";
 import {
   Home,
@@ -29,9 +29,9 @@ const Header = () => {
 
         <div className="flex justify-between items-center">
 
-          {/* IZQUIERDA */}
-          <div
-            onClick={() => window.location.href = "/"}
+          {/* IZQUIERDA: Cambiado onClick con window.location por <Link> */}
+          <Link
+            to="/"
             className="flex items-center gap-3 cursor-pointer group"
           >
             <img
@@ -39,7 +39,7 @@ const Header = () => {
               alt="logo"
               className="w-45 md:w-60 group-hover:scale-110 transition-transform"
             />
-          </div>
+          </Link>
 
           {/* MENU DESKTOP */}
           <ul className="hidden md:flex items-center gap-1">
@@ -48,8 +48,9 @@ const Header = () => {
               const active = location.pathname === item.path;
               return (
                 <li key={item.path}>
-                  <a
-                    href={item.path}
+                  {/* Cambiado <a> por <Link> y 'href' por 'to' */}
+                  <Link
+                    to={item.path}
                     className={`
                       flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium
                       transition-all duration-200
@@ -62,7 +63,7 @@ const Header = () => {
                   >
                     <Icon className="w-4 h-4" />
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -70,8 +71,9 @@ const Header = () => {
 
           {/* CTA + HAMBURGUESA */}
           <div className="flex items-center gap-3">
-            <a
-              href="/contacto"
+            {/* Cambiado <a> por <Link> */}
+            <Link
+              to="/contacto"
               className="
                 hidden md:inline-flex items-center gap-2
                 px-5 py-2.5 rounded-xl text-sm font-semibold
@@ -81,7 +83,7 @@ const Header = () => {
             >
               <Calendar className="w-4 h-4" />
               Pedir cita
-            </a>
+            </Link>
 
             <button
               className="md:hidden text-gray-700 p-2 hover:bg-gray-100 rounded-xl transition-colors"
@@ -107,8 +109,9 @@ const Header = () => {
               const active = location.pathname === item.path;
               return (
                 <li key={item.path}>
-                  <a
-                    href={item.path}
+                  {/* Cambiado <a> por <Link> */}
+                  <Link
+                    to={item.path}
                     onClick={() => setOpen(false)}
                     className={`
                       flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium
@@ -122,19 +125,20 @@ const Header = () => {
                   >
                     <Icon className="w-4 h-4" />
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
             <li className="mt-3 pt-3 border-t border-gray-100">
-              <a
-                href="/contacto"
+              {/* Cambiado <a> por <Link> */}
+              <Link
+                to="/contacto"
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold bg-[#C2CDFF] text-black"
               >
                 <Calendar className="w-4 h-4" />
                 Pedir cita
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
