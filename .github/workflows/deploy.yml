@@ -33,6 +33,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          local_path: './frontend/dist/*'
-          remote_path: 'frontend'            # <- Cambiado de '.' a 'frontend'
+          local_path: './frontend/dist/'     # <- Sin el '/*' al final para incluir .htaccess
+          remote_path: 'frontend'
           sftp_only: true
