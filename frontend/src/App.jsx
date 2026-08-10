@@ -1,7 +1,6 @@
 import Header from "./components/header/Header";
 import CookiesBanner from "./components/cookies/CookiesBanner";
-// 1. Asegúrate de añadir BrowserRouter en esta lista de importación:
-import { BrowserRouter, Routes, Route } from "react-router-dom"; 
+import { HashRouter, Routes, Route } from "react-router-dom"; // <-- Importamos HashRouter
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import SobreMiPage from "./pages/SobreMiPage";
@@ -10,7 +9,7 @@ import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
 
       <CookiesBanner />
@@ -22,7 +21,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
