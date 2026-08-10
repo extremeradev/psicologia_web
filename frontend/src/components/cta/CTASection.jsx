@@ -1,6 +1,6 @@
 const CTASection = () => {
   return (
-    <section className="bg-[#83A68E] py-16 text-center text-white">
+    <section className="bg-[#3A3B70]/70 py-16 text-center text-white">
       <h2 className="text-3xl font-semibold">
         Da el primer paso hoy
       </h2>
@@ -10,8 +10,8 @@ const CTASection = () => {
       </p>
 
       <button
-        onClick={() => (window.location.href = "/pedir-cita")}
-        className="mt-6 bg-white text-[#83A68E] px-6 py-3 rounded-full font-medium hover:opacity-90 transition cursor-pointer"
+        onClick={() => (window.location.href = "/contacto")}
+        className="mt-6 bg-white text-[#3A3B70] px-6 py-3 rounded-full font-medium hover:opacity-90 transition cursor-pointer"
       >
         Pedir cita
       </button>

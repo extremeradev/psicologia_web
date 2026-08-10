@@ -4,7 +4,6 @@ import FeaturesSection from "../features/FeaturesSection";
 import AboutSection from "../about/AboutSection";
 import ServicesSection from "../servicesSection/ServicesSection";
 import CTASection from "../cta/CTASection";
-import Footer from "../footer/Footer";
 import FadeInOnScroll from "../fadeinonscroll/FadeInOnScroll";
 
 const Home = () => {
@@ -24,9 +23,6 @@ const Home = () => {
       </FadeInOnScroll>
       <FadeInOnScroll>
         <CTASection />
-      </FadeInOnScroll>
-      <FadeInOnScroll>
-        <Footer />
       </FadeInOnScroll>
     </>
   );

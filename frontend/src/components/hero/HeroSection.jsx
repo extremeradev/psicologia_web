@@ -1,53 +1,72 @@
-import psicologa from "../../assets/bicho.png";
+import psicologa from "../../assets/hero3.png";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    
-      <section className="max-w-6xl mx-auto mt-16 flex flex-col md:flex-row items-center gap-12 px-6 animate-fade-in">
-        {/* IMAGEN */}
-        <div className="flex-1 relative max-w-md md:mr-20">
-          <div className="absolute -top-10 -left-10 w-[120%] h-[120%] bg-[#DCF2E4] rounded-[60%_40%_50%_70%] z-0"></div>
+    <section className="max-w-6xl mx-auto mt-8 md:mt-16 flex flex-col md:flex-row items-center gap-12 md:gap-16 px-6 overflow-x-clip animate-fade-in relative z-10">
+      <div className="flex-1 mt-10 md:mt-0 relative w-full max-w-md md:mr-10">
+        <div
+          className="
+          absolute 
+          -top-12
+          -left-8       /* Reducido para evitar el corte recto en el borde izquierdo */
+          w-[125%] 
+          h-[120%] 
+          bg-[#C2CDFF]/80 
+          rounded-[60%_40%_30%_70%/50%_60%_40%_50%] 
+          transform 
+          rotate-12 
+          z-0 
+          [mask-image:radial-gradient(ellipse_at_center,black_35%,transparent_70%)] 
+        "
+        ></div>
 
-          <img
-            src={psicologa}
-            alt="psicóloga"
-            className="relative z-10 w-full rounded-2xl object-cover shadow-xl"
-          />
+        {/* IMAGEN PRINCIPAL (con bordes suaves para integrarse) */}
+        <img
+          src={psicologa}
+          alt="psicóloga"
+          className="
+            relative 
+            z-10 
+            w-full 
+            rounded-2xl 
+            object-cover 
+            [mask-image:radial-gradient(ellipse_at_center,black_75%,transparent_100%)]
+          "
+        />
+      </div>
+
+      {/* BLOQUE DE TEXTO */}
+      <div className="flex-1 max-w-xl text-center md:text-left animate-fade-in relative z-20 mt-10 md:mt-0">
+        <span className="inline-block bg-[#C2CDFF]/30 text-sm px-3 py-1 rounded-full text-gray-700 font-medium">
+          Psicóloga sanitaria
+        </span>
+
+        <h1 className="text-3xl md:text-5xl font-semibold text-gray-800 mt-4 leading-tight">
+          Terapia psicológica cercana y profesional con perspectiva contextual
+        </h1>
+
+        <p className="text-gray-600 mt-4 leading-relaxed">
+          Te acompaño a hacer espacio al malestar y a construir una vida con sentido.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
+          <Link
+            to="/contacto"
+            className="bg-[#3A3B70] text-white px-6 py-3 rounded-full hover:opacity-90 transition duration-300 text-center font-medium"
+          >
+            Pedir cita
+          </Link>
+
+          <Link
+            to="/sobre-mi"
+            className="border border-[#3A3B70]/30 text-[#3A3B70] px-6 py-3 rounded-full hover:bg-[#3A3B70] hover:text-white transition duration-300 text-center font-medium"
+          >
+            Conocer más
+          </Link>
         </div>
-        
-        
-        {/* TEXTO */}
-        <div className="flex-1 max-w-xl text-center md:text-left animate-fade-in">
-          <span className="inline-block bg-[#DCF2E4] text-sm px-3 py-1 rounded-full text-gray-700">
-            Psicóloga sanitaria
-          </span>
-
-          <h1 className="text-4xl md:text-5xl font-semibold text-gray-800 mt-4 leading-tight">
-            Acompañamiento psicológico cercano y profesional
-          </h1>
-
-          <p className="text-gray-600 mt-4">
-            Te ayudo a gestionar la ansiedad, autoestima y relaciones desde un
-            enfoque práctico y humano.
-          </p>
-
-          <div className="flex gap-4 mt-6 justify-center md:justify-start">
-            <button
-              onClick={() => (window.location.href = "/pedir-cita")}
-              className="bg-[#83A68E] text-white px-6 py-3 rounded-full hover:opacity-90 transition duration-300 cursor-pointer"
-            >
-              Pedir cita
-            </button>
-
-            <button className="border border-[#83A68E] text-[#83A68E] px-6 py-3 rounded-full hover:bg-[#83A68E] hover:text-white transition cursor-pointer">
-              Conocer más
-            </button>
-          </div>
-        </div>
-
-        
-      </section>
+      </div>
+    </section>
   );
 };
 

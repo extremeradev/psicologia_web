@@ -7,17 +7,11 @@ const FeaturesSection = () => {
           Atención personalizada
         </h3>
         <p className="text-gray-600">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
-          If you are going to use a passage of Lorem Ipsum, you need to be sure
-          there isn't anything embarrassing hidden in the middle of text. All
-          the Lorem Ipsum generators on the Internet tend to repeat predefined
-          chunks as necessary, making this the first true generator on the
-          Internet. It uses a dictionary of over 200 Latin words, combined with
-          a handful of model sentence structures, to generate Lorem Ipsum which
-          looks reasonable. The generated Lorem Ipsum is therefore always free
-          from repetition, injected humour, or non-characteristic words etc.
+          El objetivo para mi es ayudarte a construir una vida con significado
+          para ti, partiendo de tus propios valores, deseos y necesidades.
+          <br /> Mi papel aquí es acompañarte, creando un espacio libre de
+          juicios donde puedas descubrir qué es lo que realmente buscas y
+          avanzar hacia una vida más plena.
         </p>
       </div>
 
@@ -27,15 +21,10 @@ const FeaturesSection = () => {
           Enfoque profesional
         </h3>
         <p className="text-gray-600">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Mi enfoque tiene una base contextual, que tiene en cuenta cómo el
+          entorno social, cultural y las relaciones influyen en nuestro
+          bienestar emocional. Además, defiendo una práctica de la psicología
+          basada en el rigor ético y en la evidencia científica.
         </p>
       </div>
 
@@ -45,11 +34,11 @@ const FeaturesSection = () => {
           Cercanía y confianza
         </h3>
         <p className="text-gray-600">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum
+          Uno de los factores que más influyen en el éxito de la terapia es la
+          calidad de la relación terapéutica. Por ello, para mí es importante
+          que ambxs nos sintamos cómodxs durante el proceso. Espero que este sea
+          un espacio seguro para ti, donde puedas compartir todo aquello que
+          necesites en cada momento.
         </p>
       </div>
     </section>

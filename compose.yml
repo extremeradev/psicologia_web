@@ -29,13 +29,15 @@ services:
       - /app/node_modules
       # Montamos la "llave" de la Service Account de Google
       - ./backend/config/google-key.json:/app/config/google-key.json:ro
+    env_file:
+      - ./backend/.env
     environment:
       - DB_HOST=postgres-db
       - DB_USER=admin
       - DB_PASSWORD=psico_secure_pass
       - DB_NAME=clinica_db
       - REDIS_HOST=cache-session
-      - GOOGLE_CALENDAR_ID=iversoneldelmomento@gmail.com # El calendario que quieres leer
+      - GOOGLE_CALENDAR_ID=sandrafernandez.psico@gmail.com # El calendario que quieres leer
       - GOOGLE_APPLICATION_CREDENTIALS=/app/config/google-key.json
     depends_on:
       - postgres-db

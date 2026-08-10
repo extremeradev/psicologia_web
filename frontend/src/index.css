@@ -15,4 +15,15 @@
   animation: fade-in 0.8s ease-out;
 }
 
+body {
+
+    @apply font-sans;
+
+}
+
+body {
+
+  @apply bg-[#C2CDFF]/15;
+
+}
 
