@@ -9,7 +9,7 @@ const services = [
     description:
       "Espacio seguro para trabajar tus dificultades emocionales. Te acompaño a desarrollar herramientas para afrontar los desafíos del día a día. Abordaje de la ansiedad, rumia de pensamientos, estrés…",
     icon: Brain,
-    color: "text-[#83A68E]",
+    color: "text-[#D498CA]",
   },
   {
     title: "Terapia de Pareja",
