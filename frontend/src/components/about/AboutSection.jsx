@@ -1,4 +1,4 @@
-import psicologa from "../../assets/sobremi.png";
+import psicologa from "../../assets/sobremi.webp";
 
 const AboutSection = () => {
   return (
@@ -23,8 +23,9 @@ const AboutSection = () => {
           <div className="">
             <img
               src={psicologa}
-              alt="psicóloga"
+              alt="Sandra Fernández, psicóloga en Jaén"
               className="object-cover w-100 h-full "
+              loading="lazy"
             />
           </div>
         </div>

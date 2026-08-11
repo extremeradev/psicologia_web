@@ -1,6 +1,6 @@
 import FadeInOnScroll from "../fadeinonscroll/FadeInOnScroll";
-import image1 from "../../assets/sobremi.jpg";
-import image2 from "../../assets/hero3.png";
+import image1 from "../../assets/sobremibooks.webp";
+import image2 from "../../assets/hero3.webp";
 import { Brain } from "lucide-react";
 
 export default function SobreMi() {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FadeInOnScroll from "../fadeinonscroll/FadeInOnScroll";
-import image1 from "../../assets/contacto.jpg";
+import image1 from "../../assets/contacto.webp";
 import {
   Phone,
   Mail,
@@ -76,7 +76,7 @@ export default function Contacto() {
         <img
           className="absolute inset-0 w-full h-full object-cover"
           src={image1}
-          alt=""
+          alt="Consulta de psicología de Sandra Fernández en Jaén"
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative h-full flex items-center justify-center">

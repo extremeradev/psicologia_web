@@ -1,4 +1,4 @@
-import psicologa from "../../assets/hero3.png";
+import psicologa from "../../assets/hero3.webp";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -24,7 +24,7 @@ const HeroSection = () => {
         {/* IMAGEN PRINCIPAL (con bordes suaves para integrarse) */}
         <img
           src={psicologa}
-          alt="psicóloga"
+          alt="Sandra Fernández, psicóloga colegiada en Jaén"
           className="
             relative 
             z-10 

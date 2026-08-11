@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocation, Link } from "react-router-dom"; // Importamos Link
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo.webp";
 import {
   Home,
   Sparkles,
