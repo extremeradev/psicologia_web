@@ -8,7 +8,7 @@ const AboutSection = () => {
 
         {/* TEXTO */}
         <div className="flex-1 flex flex-col justify-center">
-          <h2 className="text-2xl font-semibold text-gray-800 mt-10 md:mt-0">¿Quién soy?</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mt-10 md:mt-0">Quién soy</h2>
           <p className="text-gray-600 mt-4 mb-4 md:mb-0">
             Soy Sandra y, como psicóloga, mi prioridad es ofrecer un 
             acompañamiento respetuoso y consciente. En lo personal, valoro 
