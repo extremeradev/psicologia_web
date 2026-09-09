@@ -33,7 +33,7 @@ export default function PrivacyBanner() {
         <div className="flex gap-3 flex-shrink-0">
           <button
             onClick={aceptar}
-            className="px-6 py-2.5 rounded-xl bg-[#83A68E] text-white text-sm font-semibold hover:bg-[#6d8c75] transition-colors cursor-pointer"
+            className="px-6 py-2.5 rounded-xl bg-[#C2CDFF] text-white text-sm font-semibold hover:bg-[#3A3B70] transition-colors cursor-pointer"
           >
             Aceptar
           </button>
