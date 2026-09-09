@@ -1,4 +1,15 @@
+# 1. Captura de errores 404 a nivel de servidor IONOS
+ErrorDocument 404 /index.html
+
+# 2. Reescritura de rutas para React (SPA)
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
+  RewriteEngine On
+  RewriteBase /
+
+  # No aplicar la regla si el archivo o directorio existe físicamente
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Redirigir todas las subrutas al index.html de la raíz
+  RewriteRule ^ /index.html [L]
 </IfModule>
