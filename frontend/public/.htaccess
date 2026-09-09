@@ -1,12 +1,2 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-
-  # Redirigir cualquier petición que no sea un archivo o carpeta real al index.html
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ index.html [QSA,L]
-</IfModule>
-
-# Si mod_rewrite falla por permisos de IONOS, capturar el error 404 directamente
-ErrorDocument 404 /index.html
+RewriteEngine On
+RewriteBase /
