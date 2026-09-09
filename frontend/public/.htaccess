@@ -1,12 +1,6 @@
-# Forzar el uso del motor de reescritura de Apache
-RewriteEngine On
-RewriteBase /
-
-# Si el recurso solicitado no es un archivo físico existente
-RewriteCond %{REQUEST_FILENAME} !-f
-
-# Y tampoco es un directorio físico existente
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# Redirigir absolutamente todo al index.html de React
-RewriteRule ^ index.html [L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ /index.html [L]
+</IfModule>
