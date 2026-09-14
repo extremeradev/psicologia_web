@@ -4,6 +4,7 @@ import FeaturesSection from "../features/FeaturesSection";
 import AboutSection from "../about/AboutSection";
 import ServicesSection from "../servicesSection/ServicesSection";
 import CTASection from "../cta/CTASection";
+import InstagramFeed from "../instagram/InstagramFeed";
 import FadeInOnScroll from "../fadeinonscroll/FadeInOnScroll";
 
 const Home = () => {
@@ -20,6 +21,9 @@ const Home = () => {
       </FadeInOnScroll>
       <FadeInOnScroll>
         <ServicesSection />
+      </FadeInOnScroll>
+      <FadeInOnScroll>
+        <InstagramFeed />
       </FadeInOnScroll>
       <FadeInOnScroll>
         <CTASection />
