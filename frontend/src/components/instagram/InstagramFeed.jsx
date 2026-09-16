@@ -50,7 +50,7 @@ const InstagramFeed = () => {
         <div className="max-w-[360px] md:max-w-none mx-auto">
           <iframe
             ref={iframeRef}
-            src="//lightwidget.com/widgets/dfb656148ca251d2b80e77e1de308e68.html"
+            src="https://cdn.lightwidget.com/widgets/dfb656148ca251d2b80e77e1de308e68.html"
             scrolling="no"
             allowTransparency="true"
             className="lightwidget-widget"
