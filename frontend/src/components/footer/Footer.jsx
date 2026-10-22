@@ -23,7 +23,6 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-sm">
             <li>
-              {/* Cambiado <a> por <Link to="..."> */}
               <Link to="/" className="hover:text-white transition">
                 Inicio
               </Link>
@@ -39,8 +38,21 @@ const Footer = () => {
               </Link>
             </li>
             <li>
+              <Link to="/consulta" className="hover:text-white transition">
+                Consulta
+              </Link>
+            </li>
+            <li>
               <Link to="/contacto" className="hover:text-white transition">
                 Contacto
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/politica-privacidad"
+                className="hover:text-white transition"
+              >
+                Política de privacidad
               </Link>
             </li>
           </ul>
@@ -87,7 +99,7 @@ const Footer = () => {
                 ✉️ sandrafernandez.psico@gmail.com
               </a>
             </li>
-            <li>📍 Jaén, España</li>
+            <li>📍 Paseo de la Estación, 23, entreplanta C, 23007 Jaén</li>
           </ul>
         </div>
       </div>

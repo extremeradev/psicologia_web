@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FadeInOnScroll from "../fadeinonscroll/FadeInOnScroll";
-import image1 from "../../assets/contacto.webp";
+import image1 from "../../assets/sillones.webp";
 import {
   Phone,
   Mail,
@@ -8,7 +8,6 @@ import {
   Clock,
   Send,
   CheckCircle,
-  AlertCircle,
 } from "lucide-react";
 
 const contactInfo = [
@@ -24,12 +23,12 @@ const contactInfo = [
     value: "sandrafernandez.psico@gmail.com",
     href: "mailto:sandrafernandez.psico@gmail.com",
   },
-  /*{
+  {
     icon: MapPin,
     title: "Dirección",
-    value: "Calle Ejemplo, 12, Valladolid",
-    href: "https://maps.google.com",
-  },*/
+    value: "Paseo de la Estación, 23, entreplanta C, 23007 Jaén",
+    href: "https://www.google.com/maps/search/?api=1&query=Paseo%20de%20la%20Estaci%C3%B3n%2023%2C%2023007%20Ja%C3%A9n%2C%20Espa%C3%B1a",
+  },
   {
     icon: Clock,
     title: "Horario",
@@ -243,17 +242,17 @@ export default function Contacto() {
       </section>
 
       {/* Mapa */}
-      {/* <section className="w-full h-80 md:h-96">
+      <section className="w-full h-80 md:h-96">
         <iframe
           title="Ubicación"
-          src="https://www.google.com/maps?q=1+Av.+del+Ej%C3%A9rcito+Espa%C3%B1ol+Ja%C3%A9n&output=embed"
+          src="https://www.google.com/maps?q=Paseo%20de%20la%20Estaci%C3%B3n%2023%2C%2023007%20Ja%C3%A9n%2C%20Espa%C3%B1a&z=17&output=embed"
           className="w-full h-full"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
-      </section>*/}
+      </section>
     </>
   );
 }

@@ -6,6 +6,7 @@ import {
   Sparkles,
   User,
   Phone,
+  MapPin,
   Menu,
   X,
   Calendar,
@@ -15,6 +16,7 @@ const navItems = [
   { label: "Inicio", path: "/", icon: Home },
   { label: "Servicios", path: "/servicios", icon: Sparkles },
   { label: "Sobre mí", path: "/sobre-mi", icon: User },
+  { label: "Consulta", path: "/consulta", icon: MapPin },
   { label: "Contacto", path: "/contacto", icon: Phone },
 ];
 

@@ -11,7 +11,9 @@ export default function HomePage() {
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Paseo de la Estación, 23, entreplanta C",
       "addressLocality": "Jaén",
+      "postalCode": "23007",
       "addressCountry": "ES"
     },
     "openingHours": "Mo-Fr 09:00-20:00"

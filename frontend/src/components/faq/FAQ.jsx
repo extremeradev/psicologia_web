@@ -36,9 +36,10 @@ function AccordionItem({ faq, index }) {
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between px-6 py-5 text-left text-gray-800 font-medium hover:bg-[#3A3B70]/50 transition-colors"
+        aria-expanded={open}
+        className="w-full flex items-center justify-between px-6 py-5 text-left bg-[#3A3B70]/80 text-white hover:bg-[#3A3B70] transition-colors"
       >
-        <span>{faq.q}</span>
+        <span className="font-semibold">{faq.q}</span>
         <ChevronDown
           className={`w-5 h-5 text-[#C2CDFF]/50 flex-shrink-0 transition-transform duration-300 ${
             open ? "rotate-180" : ""
@@ -51,7 +52,9 @@ function AccordionItem({ faq, index }) {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="px-6 pb-5 text-gray-600 leading-relaxed">{faq.a}</p>
+          <p className="mt-4 px-6 pb-5 text-gray-600 leading-relaxed">
+            {faq.a}
+          </p>
         </div>
       </div>
     </div>

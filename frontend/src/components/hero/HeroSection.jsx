@@ -39,7 +39,7 @@ const HeroSection = () => {
       {/* BLOQUE DE TEXTO */}
       <div className="flex-1 max-w-xl text-center md:text-left animate-fade-in relative z-20 mt-10 md:mt-0">
         <span className="inline-block bg-[#C2CDFF]/30 text-sm px-3 py-1 rounded-full text-gray-700 font-medium">
-          Psicóloga sanitaria
+          Psicóloga en Jaén
         </span>
 
         <h1 className="text-3xl md:text-5xl font-semibold text-gray-800 mt-4 leading-tight">

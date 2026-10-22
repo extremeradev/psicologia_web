@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Montserrat", Arial, sans-serif;
+  --font-serif: "Montserrat", Arial, sans-serif;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -16,14 +21,14 @@
 }
 
 body {
-
-    @apply font-sans;
-
+  @apply font-sans bg-[#C2CDFF]/15;
 }
 
-body {
-
-  @apply bg-[#C2CDFF]/15;
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", Arial, sans-serif;
 }
-

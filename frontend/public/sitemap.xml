@@ -31,4 +31,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Consulta -->
+  <url>
+    <loc>https://sandrafernandezpsicologa.es/consulta</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Política de privacidad -->
+  <url>
+    <loc>https://sandrafernandezpsicologa.es/politica-privacidad</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter"],
-        serif: ["Playfair Display", "serif"],
+        sans: ["Montserrat", "Arial", "sans-serif"],
+        serif: ["Montserrat", "Arial", "sans-serif"],
       },
       animation: {
         'fade-in': 'opacity-0 animate-fade-in-up 0.8s ease-out',
