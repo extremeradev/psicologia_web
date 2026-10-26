@@ -1,5 +1,5 @@
 import FadeInOnScroll from "../fadeinonscroll/FadeInOnScroll";
-import image1 from "../../assets/sobremibooks.webp";
+import image1 from "../../assets/IMG_8649.webp";
 import image2 from "../../assets/hero3.webp";
 import { Brain } from "lucide-react";
 
@@ -19,10 +19,18 @@ export default function SobreMi() {
         <div className="absolute inset-0 bg-gray-900/50" />
 
         {/* Título en blanco resaltado */}
-        <div className="relative p-8 space-y-6 z-10">
+        <div className="relative z-10 px-6 py-16 md:py-24">
           <FadeInOnScroll>
-            <div className="text-center mb-16 mt-20">
-              <h1 className="text-5xl font-bold text-white">Sobre mí</h1>
+            <div className="text-center max-w-3xl mx-auto text-white">
+              <p className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+                Conóceme
+              </p>
+              <h1 className="text-3xl md:text-5xl font-bold tracking-tight mt-2 drop-shadow-sm">
+                Sobre mí
+              </h1>
+              <p className="text-sm md:text-lg mt-3 text-white/90 leading-relaxed drop-shadow-sm">
+                Conoce mi trayectoria y cómo entiendo la terapia
+              </p>
             </div>
           </FadeInOnScroll>
         </div>
@@ -30,11 +38,11 @@ export default function SobreMi() {
 
       {/* ICONO CENTRADO Y DATOS PERSONALES */}
       <FadeInOnScroll>
-        <div className="flex flex-col items-center mb-4 md:mb-12 px-6 py-8 md:py-16 text-center">
+        <div className="relative z-10 -mt-8 md:-mt-12 rounded-t-3xl bg-[#F6F8FF] flex flex-col items-center mb-4 md:mb-12 px-6 pt-12 pb-8 md:pt-16 md:pb-16 text-center">
           <Brain className="w-10 h-10 text-[#3A3B70] mb-4" />
-          <h1 className="text-black font-bold text-xl md:text-3xl">
+          <h2 className="text-black font-bold text-xl md:text-3xl">
             Sandra Fernández Pérez
-          </h1>
+          </h2>
           <h3 className="text-black text-lg md:text-2xl mt-1">
             Psicóloga General Sanitaria - Colegiada: AO 14236
           </h3>

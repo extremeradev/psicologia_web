@@ -8,7 +8,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import despacho1 from "../../assets/despacho1.webp";
+import despacho1 from "../../assets/IMG_8653.webp";
 
 const services = [
   {
@@ -16,28 +16,24 @@ const services = [
     description:
       "Espacio seguro para trabajar tus dificultades emocionales. Te acompaño a desarrollar herramientas para afrontar los desafíos del día a día. Abordaje de la ansiedad, rumia de pensamientos, estrés…",
     icon: UserRound,
-    color: "text-[#D498CA]",
   },
   {
     title: "Terapia de Pareja",
     description:
       "Mejora la comunicación y fortalece el vínculo. Se abordan conflictos, crisis y diferencias para construir una relación más sana y equilibrada o para sostener el fin de esta.",
     icon: HeartHandshake,
-    color: "text-rose-400",
   },
   {
     title: "Terapia Infantojuvenil",
     description:
       "Atención especializada para niños y adolescentes. Se trabajan problemas emocionales, conductuales y dificultades escolares desde un enfoque lúdico.",
     icon: Puzzle,
-    color: "text-sky-400",
   },
   {
     title: "Terapia Online",
     description:
       "Una opción igual de eficaz que la terapia presencial. Mismas características y mayor comodidad sin desplazamientos.",
     icon: Video,
-    color: "text-yellow-400",
   },
 ];
 
@@ -59,12 +55,15 @@ export default function Services() {
         <div className="relative z-10 px-3 pt-8 pb-10 md:px-6 md:pt-32 md:pb-40">
           <FadeInOnScroll>
             <div className="text-center mb-6 md:mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-white">
+              <p className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+                Terapias personalizadas
+              </p>
+              <h1 className="mt-2 text-3xl md:text-5xl font-bold tracking-tight text-white drop-shadow-sm">
                 Servicios
-              </h2>
-              <p className="text-sm md:text-lg text-gray-200 mt-3 md:mt-4 max-w-2xl mx-auto">
-                Un espacio de confianza donde trabajar tu bienestar emocional.
-                Cada servicio está adaptado a tus necesidades.
+              </h1>
+              <p className="text-sm md:text-lg text-white/90 mt-3 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
+                Terapia para adultos, parejas, niños y adolescentes; presencial
+                en Jaén y online
               </p>
             </div>
           </FadeInOnScroll>
@@ -81,23 +80,26 @@ export default function Services() {
       </section>
 
       {/* Llamado a la acción */}
-      <FadeInOnScroll>
-        <div className="bg-[#C2CDFF]/2 text-center pt-20 pb-12 px-6">
-          <p className="text-gray-600 text-lg">¿No encuentras lo que buscas?</p>
+      <div className="relative z-10 -mt-8 md:-mt-12 rounded-t-3xl bg-[#F6F8FF] text-center pt-12 md:pt-16 pb-12 px-6">
+        <div className="max-w-4xl mx-auto rounded-3xl border border-white/80 bg-white/75 px-6 py-8 md:px-12 md:py-10 shadow-sm">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[#3A3B70]/70">
+            ¿Necesitas orientación?
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#3A3B70] mt-2">
+            ¿No encuentras lo que buscas?
+          </h2>
+          <p className="text-gray-700 mt-3 max-w-xl mx-auto">
+            Cuéntame qué necesitas y te ayudaré a encontrar la opción adecuada.
+          </p>
           <Link
             to="/contacto"
-            className="
-    inline-flex items-center gap-2 mt-4
-    px-8 py-4 rounded-full
-    bg-[#3A3B70]/80 text-white font-semibold
-    hover:bg-[#3A3B70] transition-colors
-  "
+            className="inline-flex items-center gap-2 mt-6 px-8 py-3.5 rounded-full bg-[#3A3B70]/80 text-white font-semibold hover:bg-[#3A3B70] transition-colors"
           >
             Consulta otros servicios
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
-      </FadeInOnScroll>
+      </div>
 
       <FAQ />
     </>
@@ -108,7 +110,6 @@ function ServiceCard({
   title,
   description,
   icon: Icon,
-  color,
   index,
 }) {
   const delay = index * 100;
@@ -126,7 +127,7 @@ function ServiceCard({
       "
     >
       <div
-        className={`w-9 h-9 md:w-14 md:h-14 rounded-lg md:rounded-xl ${color} bg-white/80 flex items-center justify-center flex-shrink-0 mb-0 md:mb-5 group-hover:scale-110 transition-transform`}
+        className="w-9 h-9 md:w-14 md:h-14 rounded-lg md:rounded-xl text-black bg-white/80 flex items-center justify-center flex-shrink-0 mb-0 md:mb-5 group-hover:scale-110 transition-transform"
       >
         <Icon className="w-5 h-5 md:w-7 md:h-7" />
       </div>

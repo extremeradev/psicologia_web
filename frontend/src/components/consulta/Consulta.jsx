@@ -1,10 +1,10 @@
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import despacho1 from "../../assets/despacho1.webp";
-import escritorio1 from "../../assets/escritorio1.webp";
-import escritorio2 from "../../assets/escritorio2.webp";
-import mesita1 from "../../assets/mesita1.webp";
-import sillones from "../../assets/sillones.webp";
+import despacho1 from "../../assets/IMG_8529.webp";
+import escritorio1 from "../../assets/IMG_8653.webp";
+import escritorio2 from "../../assets/IMG_8647.webp";
+import mesita1 from "../../assets/IMG_8649.webp";
+import sillones from "../../assets/IMG_8562.webp";
 
 const photos = [
   { src: despacho1, alt: "Vista general de la consulta" },

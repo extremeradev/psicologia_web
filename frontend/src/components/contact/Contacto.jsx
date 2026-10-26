@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FadeInOnScroll from "../fadeinonscroll/FadeInOnScroll";
-import image1 from "../../assets/sillones.webp";
+import image1 from "../../assets/contacto1.webp";
 import {
   Phone,
   Mail,
@@ -72,18 +72,25 @@ export default function Contacto() {
     <>
       {/* Hero */}
       <section className="relative h-72 md:h-96">
-        <img
-          className="absolute inset-0 w-full h-full object-cover"
-          src={image1}
-          alt="Consulta de psicología de Sandra Fernández en Jaén"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative h-full flex items-center justify-center">
+        <div className="absolute inset-0">
+          <img
+            className="absolute inset-0 w-full h-full object-cover"
+            src={image1}
+            alt="Consulta de psicología de Sandra Fernández en Jaén"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+        <div className="relative z-10 h-full flex items-center justify-center">
           <FadeInOnScroll>
-            <div className="text-center text-white">
-              <h1 className="text-5xl md:text-6xl font-bold">Contacto</h1>
-              <p className="text-lg mt-4 text-white/80">
-                Estoy aquí para ayudarte
+            <div className="text-center text-white px-6 -translate-y-6 md:-translate-y-10">
+              <p className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+                Hablemos
+              </p>
+              <h1 className="text-3xl md:text-5xl font-bold tracking-tight mt-2 drop-shadow-sm">
+                Contacto
+              </h1>
+              <p className="text-sm md:text-lg mt-3 text-white/90 max-w-xl mx-auto leading-relaxed drop-shadow-sm">
+                Estoy aquí para ayudarte a dar el siguiente paso
               </p>
             </div>
           </FadeInOnScroll>
@@ -91,7 +98,7 @@ export default function Contacto() {
       </section>
 
       {/* Info + Formulario */}
-      <section className="py-20 md:py-28">
+      <section className="relative z-10 -mt-8 md:-mt-12 rounded-t-3xl bg-[#F6F8FF] pt-12 pb-20 md:pt-16 md:pb-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16">
             {/* Columna izquierda: datos de contacto */}
