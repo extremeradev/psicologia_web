@@ -1,10 +1,11 @@
 import psicologa from "../../assets/hero3.webp";
+import psicologaAvif from "../../assets/hero3.avif";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="max-w-6xl mx-auto mt-8 md:mt-16 flex flex-col md:flex-row items-center gap-12 md:gap-16 px-6 overflow-x-clip animate-fade-in relative z-10">
-      <div className="flex-1 mt-10 md:mt-0 relative w-full max-w-md md:mr-10">
+    <section className="max-w-6xl mx-auto mt-8 md:mt-16 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16 px-6 overflow-x-clip animate-fade-in relative z-10">
+      <div className="flex-1 mt-0 relative w-full max-w-md md:mr-10">
         <div
           className="
           absolute 
@@ -22,22 +23,34 @@ const HeroSection = () => {
         ></div>
 
         {/* IMAGEN PRINCIPAL (con bordes suaves para integrarse) */}
-        <img
-          src={psicologa}
-          alt="Sandra Fernández, psicóloga colegiada en Jaén"
-          className="
+        <picture
+          className="relative z-10 block w-full"
+          style={{
+            maskImage:
+              "linear-gradient(to bottom, black 0%, black 92%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, black 0%, black 92%, transparent 100%)",
+          }}
+        >
+          <source srcSet={psicologaAvif} type="image/avif" />
+          <img
+            src={psicologa}
+            alt="Sandra Fernández, psicóloga colegiada en Jaén"
+            fetchPriority="high"
+            decoding="async"
+            className="
             relative 
-            z-10 
             w-full 
             rounded-2xl 
             object-cover 
             [mask-image:radial-gradient(ellipse_at_center,black_75%,transparent_100%)]
           "
-        />
+          />
+        </picture>
       </div>
 
       {/* BLOQUE DE TEXTO */}
-      <div className="flex-1 max-w-xl text-center md:text-left animate-fade-in relative z-20 mt-10 md:mt-0">
+      <div className="flex-1 max-w-xl text-center md:text-left animate-fade-in relative z-20 mt-0">
         <span className="inline-block bg-[#C2CDFF]/30 text-sm px-3 py-1 rounded-full text-gray-700 font-medium">
           Psicóloga en Jaén
         </span>

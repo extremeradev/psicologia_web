@@ -99,7 +99,16 @@ const Footer = () => {
                 ✉️ sandrafernandez.psico@gmail.com
               </a>
             </li>
-            <li>📍 Paseo de la Estación, 23, entreplanta C, 23007 Jaén</li>
+            <li>
+              <a
+                href="https://maps.app.goo.gl/CY6LbtUJKDtfXBg98"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition inline-block"
+              >
+                📍 Paseo de la Estación, 23, entreplanta C, 23007 Jaén
+              </a>
+            </li>
           </ul>
         </div>
       </div>

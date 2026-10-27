@@ -1,6 +1,8 @@
 import FadeInOnScroll from "../fadeinonscroll/FadeInOnScroll";
 import image1 from "../../assets/IMG_8649.webp";
+import image1Avif from "../../assets/IMG_8649.avif";
 import image2 from "../../assets/hero3.webp";
+import image2Avif from "../../assets/hero3.avif";
 import { Brain } from "lucide-react";
 
 export default function SobreMi() {
@@ -9,11 +11,16 @@ export default function SobreMi() {
       {/* Hero Header */}
       <div className="relative m-0 p-0 pb-10 overflow-hidden">
         {/* Imagen de fondo */}
-        <img
-          className="absolute inset-0 w-full h-full object-cover"
-          src={image1}
-          alt=""
-        />
+        <picture className="absolute inset-0 block">
+          <source srcSet={image1Avif} type="image/avif" />
+          <img
+            className="absolute inset-0 w-full h-full object-cover"
+            src={image1}
+            alt=""
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
 
         {/* Capa grisácea (Overlay) */}
         <div className="absolute inset-0 bg-gray-900/50" />
@@ -55,11 +62,16 @@ export default function SobreMi() {
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
             {/* IMAGEN */}
             <div className="w-52 h-52 md:w-64 md:h-64 overflow-hidden flex-shrink-0 rounded-full">
-              <img
-                src={image2}
-                className="w-full h-full object-cover"
-                alt="Sandra"
-              />
+              <picture className="block h-full w-full">
+                <source srcSet={image2Avif} type="image/avif" />
+                <img
+                  src={image2}
+                  className="w-full h-full object-cover"
+                  alt="Sandra Fernández, psicóloga"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
 
             {/* LISTA DE FORMACIÓN */}

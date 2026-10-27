@@ -8,6 +8,7 @@ import SobreMiPage from "./pages/SobreMiPage";
 import ContactoPage from "./pages/ContactoPage";
 import ConsultaPage from "./pages/ConsultaPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import StickyWhatsAppButton from "./components/contact/StickyWhatsAppButton";
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <ScrollToTop />
       <Header />
       <CookiesBanner />
+      <StickyWhatsAppButton />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/servicios" element={<ServicesPage />} />

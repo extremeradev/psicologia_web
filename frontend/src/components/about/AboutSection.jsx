@@ -26,6 +26,7 @@ const AboutSection = () => {
               alt="Sandra Fernández, psicóloga en Jaén"
               className="object-cover w-100 h-full "
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

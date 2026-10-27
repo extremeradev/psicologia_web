@@ -1,17 +1,22 @@
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import despacho1 from "../../assets/IMG_8529.webp";
+import despacho1Avif from "../../assets/IMG_8529.avif";
 import escritorio1 from "../../assets/IMG_8653.webp";
+import escritorio1Avif from "../../assets/IMG_8653.avif";
 import escritorio2 from "../../assets/IMG_8647.webp";
+import escritorio2Avif from "../../assets/IMG_8647.avif";
 import mesita1 from "../../assets/IMG_8649.webp";
+import mesita1Avif from "../../assets/IMG_8649.avif";
 import sillones from "../../assets/IMG_8562.webp";
+import sillonesAvif from "../../assets/IMG_8562.avif";
 
 const photos = [
-  { src: despacho1, alt: "Vista general de la consulta" },
-  { src: escritorio1, alt: "Escritorio de la consulta" },
-  { src: escritorio2, alt: "Detalle del escritorio" },
-  { src: mesita1, alt: "Detalle de la mesita de la consulta" },
-  { src: sillones, alt: "Sillones de la consulta" },
+  { src: despacho1, avif: despacho1Avif, alt: "Vista general de la consulta" },
+  { src: escritorio1, avif: escritorio1Avif, alt: "Escritorio de la consulta" },
+  { src: escritorio2, avif: escritorio2Avif, alt: "Detalle del escritorio" },
+  { src: mesita1, avif: mesita1Avif, alt: "Detalle de la mesita de la consulta" },
+  { src: sillones, avif: sillonesAvif, alt: "Sillones de la consulta" },
 ];
 
 export default function Consulta() {
@@ -61,18 +66,24 @@ export default function Consulta() {
             className="flex h-full transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
-            {photos.map((photo) => (
+            {photos.map((photo, index) => (
               <div
                 key={photo.src}
                 className="h-full w-full flex-shrink-0"
                 role="group"
                 aria-roledescription="diapositiva"
               >
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className="h-full w-full object-contain"
-                />
+                <picture className="block h-full w-full">
+                  <source srcSet={photo.avif} type="image/avif" />
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading={index === activeIndex ? "eager" : "lazy"}
+                    fetchPriority={index === activeIndex ? "high" : "low"}
+                    decoding="async"
+                    className="h-full w-full object-contain"
+                  />
+                </picture>
               </div>
             ))}
           </div>

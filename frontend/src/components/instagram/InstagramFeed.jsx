@@ -55,6 +55,7 @@ const InstagramFeed = () => {
             allowTransparency="true"
             className="lightwidget-widget"
             style={{ width: "100%", border: "0", overflow: "hidden" }}
+            loading="lazy"
           />
         </div>
       </div>

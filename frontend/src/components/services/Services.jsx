@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import despacho1 from "../../assets/IMG_8653.webp";
+import despacho1Avif from "../../assets/IMG_8653.avif";
 
 const services = [
   {
@@ -43,12 +44,17 @@ export default function Services() {
       <section className="relative overflow-hidden">
         {/* Imagen de fondo */}
         <div className="absolute inset-0">
-          <img
-            src={despacho1}
-            alt=""
-            aria-hidden="true"
-            className="w-full h-full object-cover"
-          />
+          <picture className="absolute inset-0 block h-full w-full">
+            <source srcSet={despacho1Avif} type="image/avif" />
+            <img
+              src={despacho1}
+              alt=""
+              aria-hidden="true"
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-full object-cover"
+            />
+          </picture>
         </div>
 
         {/* Contenido */}
